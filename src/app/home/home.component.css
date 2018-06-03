@@ -1,0 +1,28 @@
+.pins {
+  padding-top: 10px;
+  padding-left: 160px;
+  padding-right: 160px;
+}
+.sticky.active {
+  position: fixed;
+  top: 0;
+  width: 100%;  
+}
+
+.categories {
+  overflow: auto;
+  overflow-y: hidden;
+  width: 100%;
+  padding-top: 15px;
+  white-space: nowrap;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  background-color: white;
+}
+
+@media only screen and (max-width: 1024px) {
+  .pins {
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+}
