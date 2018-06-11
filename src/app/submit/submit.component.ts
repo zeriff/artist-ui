@@ -4,6 +4,7 @@ import { LoaderService } from "../services/loader.service";
 import * as _ from "lodash";
 import { NgForm } from "@angular/forms";
 import { Router, ActivatedRoute } from "@angular/router";
+import { ToastService } from "../services/toast.service";
 
 @Component({
   selector: "app-submit",
@@ -12,6 +13,7 @@ import { Router, ActivatedRoute } from "@angular/router";
 })
 export class SubmitComponent implements OnInit {
   @ViewChild("submission") submitForm: NgForm;
+  private action: string = "Submit";
   private editMode: boolean = false;
   private loading: boolean = false;
   private submissionId: string = "";
@@ -20,7 +22,8 @@ export class SubmitComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private api: ApiService
+    private api: ApiService,
+    private toast: ToastService
   ) {}
 
   onFormSubmitError(err) {
@@ -37,6 +40,7 @@ export class SubmitComponent implements OnInit {
   onFormSubmitSuccess(res) {
     this.loading = false;
     this.router.navigate(["/submission", res.id]);
+    this.toast.show("Successfully submited..");
   }
 
   onFormSubmit() {
@@ -71,6 +75,7 @@ export class SubmitComponent implements OnInit {
     if (id) {
       this.submissionId = id;
       this.editMode = true;
+      this.action = "Submit Edits";
       this.api.getSubmission(id).subscribe(res => {
         this.submitForm.form.setValue({
           email: res.email,

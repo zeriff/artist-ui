@@ -15,6 +15,7 @@ import { LoaderComponent } from "./assets/loader/loader.component";
 
 import { LoaderService } from "./services/loader.service";
 import { SubmissionComponent } from "./submission/submission.component";
+import { ToastComponent } from './assets/toast/toast.component';
 
 const BASE_URL = "http://localhost:3000";
 
@@ -35,7 +36,8 @@ const appRoutes: Routes = [
     GridComponent,
     CardComponent,
     LoaderComponent,
-    SubmissionComponent
+    SubmissionComponent,
+    ToastComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

@@ -3,20 +3,17 @@
   left: 50%;
   top: 50%;
   z-index: 1;
-  width: 150px;
-  height: 150px;
+  width: 60px;
+  height: 60px;
   margin: -75px 0 0 -75px;
-  border: 16px solid #f3f3f3;
+  border: 8px solid #f3f3f3;
   border-radius: 50%;
-  border-top: 16px solid #3498db;
-  width: 120px;
-  height: 120px;
+  border-top: 8px solid #e7c901;
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
 }
-
 .loader-container {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.2);
   z-index: 999;
   left: 0;
   top: 0;

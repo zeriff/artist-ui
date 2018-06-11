@@ -25,7 +25,7 @@
         <div class="field">
           <textarea type="text" name="desc" ngModel #desc="ngModel" placeholder="About video"></textarea>
         </div>
-        <button [disabled]="!submission.valid" class="ui right floated button">Submit</button>
+        <button [disabled]="!submission.valid" [ngClass]="{'ui mini right floated button': true, loading: loading}">{{action}}</button>
       </form>
     </div>
   </div>
