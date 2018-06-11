@@ -1,0 +1,27 @@
+<div class="ui container">
+  <div class="ui two column centered stackable grid">
+    <div class="column">
+      <div class="ui fluid card">
+        <div class="image">
+          <img src="{{submission.image}}" />
+        </div>
+        <div class="content">
+          <div class="header">{{submission.title}}</div>
+        </div>
+      </div>
+      <div class="ui fluid card">
+        <div class="content">
+          <div class="header">
+            {{submission.name}}
+          </div>
+          <hr>
+          <div class="description">
+            {{submission.desc}}
+          </div>
+        </div>
+      </div>
+      <div class="ui divider"></div>
+      <button (click)="onEditClick()" class="ui right floated button">Edit</button>
+    </div>
+  </div>
+</div>

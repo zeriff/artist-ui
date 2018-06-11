@@ -1,3 +1,32 @@
-<p>
-  submit works!
-</p>
+<div class="ui container">
+  <div class="ui two column stackable centered grid">
+    <div class="column">
+      <form #submission="ngForm" (ngSubmit)="onFormSubmit(submission.form);" class="ui form">
+        <div class="error" *ngIf="submission.form.errors">
+          <div class="ui negative message">
+            <div class="header">
+              Oops you missed something..
+            </div>
+            <ul class="list">
+              {{submission.form.errors}}
+            </ul>
+          </div>
+        </div>
+
+        <div [ngClass]="{field: true, error: email.touched && email.errors}">
+          <input type="text" name="email" (ngModel)="email" #email="ngModel" required placeholder="Email*" />
+        </div>
+        <div [ngClass]="{field: true, error: name.touched && name.errors}">
+          <input type="text" name="name" ngModel #name="ngModel" required placeholder="Name*" />
+        </div>
+        <div [ngClass]="{field: true, error: link.touched && link.errors}">
+          <input type="text" name="link" ngModel #link="ngModel" required placeholder="Your video link*" />
+        </div>
+        <div class="field">
+          <textarea type="text" name="desc" ngModel #desc="ngModel" placeholder="About video"></textarea>
+        </div>
+        <button [disabled]="!submission.valid" class="ui right floated button">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

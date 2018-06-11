@@ -1,0 +1,10 @@
+.ui.container {
+  margin-top: 50px;
+}
+.error {
+  margin-bottom: 10px;
+}
+
+/* input.ng-invalid {
+  border: 1px solid red;
+} */

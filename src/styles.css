@@ -4,19 +4,17 @@
 
 body {
   background-color: #f0f0f0;
-  width: inherit; 
+  width: inherit;
   margin: 0 auto;
 }
 .ui.segment {
   border-radius: 0;
   margin-bottom: 0rem;
 }
-.ui.grid > .column:not(.row) {
-  padding-left: 0.6rem;
-  padding-right: 0.6rem;
-}
 
 .ui.grid > .column:not(.row) {
+  padding-left: 0rem;
+  padding-right: 0rem;
   padding-top: 0rem;
   padding-bottom: 0rem;
 }
@@ -26,8 +24,16 @@ body {
     padding-right: 0rem !important;
   }
   .ui.grid > .column:not(.row) {
-    padding-left: 0rem;
-    padding-right: 0rem;
+    padding-left: 0rem !important;
+    padding-right: 0rem !important;
+    padding-top: 0rem !important;
+    padding-bottom: 0rem !important;
+  }
+  .ui.stackable.grid > .column:not(.row) {
+    padding-left: 0rem !important;
+    padding-right: 0rem !important;
+    padding-top: 0.4rem !important;
+    padding-bottom: 0rem !important;
   }
   .ui.stackable.grid > .wide.column {
     padding-left: 0rem !important;
@@ -124,4 +130,21 @@ body {
 
 .ui.content {
   padding: 16px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.ui .card {
+  border-radius: 0px !important;
+}
+
+.ui.card > :first-child {
+  border-radius: 0px !important;
 }

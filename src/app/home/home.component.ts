@@ -8,6 +8,18 @@ import { Component, OnInit } from "@angular/core";
 export class HomeComponent implements OnInit {
   constructor() {}
 
+  items = [
+    "/assets/img/1.jpg",
+    "/assets/img/2.jpeg",
+    "/assets/img/3.jpeg",
+    "/assets/img/1.jpg",
+    "/assets/img/2.jpeg",
+    "/assets/img/3.jpeg",
+    "/assets/img/1.jpg",
+    "/assets/img/2.jpeg",
+    "/assets/img/3.jpeg"
+  ];
+
   ngOnInit() {
     window.onscroll = () => {
       var sticky = document.getElementById("category");
