@@ -1,5 +1,5 @@
 .pin {
-  height: 530px;
+  height: 614px;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
@@ -15,17 +15,67 @@
 }
 
 .header {
+  display: table;
   text-align: left;
-  font-size: 26px;
+  font-size: 23px;
   background: rgba(0, 0, 0, 0.65);
   padding: 2px 12px;
   margin: 2px;
+  max-width: 80%;
 }
 
 .sub-header {
   text-align: left;
-  font-size: 19px;
+  display: table;
+  font-size: 14px;
   background: rgba(0, 0, 0, 0.65);
   padding: 2px 12px;
   margin: 2px;
+  max-width: 80%;
+}
+
+.play-container {
+  margin: 0 auto;
+  width: 100px;
+  cursor: pointer;
+  position: relative;
+  top: 50%;
+  transform: perspective(1px) translateY(-50%);
+}
+
+.fluid-media {
+  position: relative;
+  padding-bottom: 56.25%; /* proportion value to aspect ratio 16:9 (9 / 16 = 0.5625 or 56.25%) */
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  cursor: pointer;
+}
+
+.icon {
+  z-index: 999;
+}
+
+.video-frame-scroller-div-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100% !important;
+  height: 45% !important;
+}
+
+.video-frame-scroller-div-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 45% !important;
 }

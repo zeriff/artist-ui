@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import { ApiService } from "../services/api.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-home",
@@ -6,21 +8,16 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./home.component.css"]
 })
 export class HomeComponent implements OnInit {
-  constructor() {}
-
-  items = [
-    "/assets/img/1.jpg",
-    "/assets/img/2.jpeg",
-    "/assets/img/3.jpeg",
-    "/assets/img/1.jpg",
-    "/assets/img/2.jpeg",
-    "/assets/img/3.jpeg",
-    "/assets/img/1.jpg",
-    "/assets/img/2.jpeg",
-    "/assets/img/3.jpeg"
-  ];
-
+  constructor(private api: ApiService, private router: Router) {}
+  items = [];
+  loadPins(id) {
+    return this.api.getPins(id).subscribe(pins => {
+      this.items = pins;
+    });
+  }
   ngOnInit() {
+    console.log("nginit");
+    this.loadPins(0);
     window.onscroll = () => {
       var sticky = document.getElementById("category");
       if (window.pageYOffset > sticky.offsetTop) {
@@ -30,4 +27,7 @@ export class HomeComponent implements OnInit {
       }
     };
   }
+  onCategoryChange = category => {
+    return this.loadPins(category.id);
+  };
 }

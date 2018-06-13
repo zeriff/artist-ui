@@ -14,10 +14,18 @@ body {
 
 .ui.grid > .column:not(.row) {
   padding-left: 0rem;
-  padding-right: 0rem;
+  padding-right: 0.5rem;
   padding-top: 0rem;
-  padding-bottom: 0rem;
+  padding-bottom: 0.5rem;
 }
+
+.ui.grid > .column:not(.row) .video-frame {
+  padding-left: 0rem;
+  padding-right: 0.5rem;
+  padding-top: 0rem;
+  padding-bottom: 0.5rem;
+}
+
 @media only screen and (max-width: 767px) {
   .ui.grid > * {
     padding-left: 0rem !important;
@@ -29,6 +37,13 @@ body {
     padding-top: 0rem !important;
     padding-bottom: 0rem !important;
   }
+  .ui.grid > .column:not(.row) .video-frame {
+    padding-left: 0rem !important;
+    padding-right: 0rem !important;
+    padding-top: 0.5rem !important;
+    padding-bottom: 0rem !important;
+  }
+
   .ui.stackable.grid > .column:not(.row) {
     padding-left: 0rem !important;
     padding-right: 0rem !important;
@@ -40,8 +55,6 @@ body {
     padding-right: 0rem !important;
   }
 }
-
-
 
 .info {
   font-size: 23px;
@@ -82,4 +95,8 @@ body {
 
 .ui.card > :first-child {
   border-radius: 0px !important;
+}
+
+.hidden {
+  display: none;
 }

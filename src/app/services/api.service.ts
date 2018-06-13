@@ -15,6 +15,16 @@ export class ApiService {
       console.log("OPTIONS");
     });
   }
+  getPins(id): Observable<any> {
+    let url = `${this.base_url}/pins/by_category/${id}`;
+    return this.http.get(url);
+  }
+
+  getCategories() {
+    let url = this.base_url + "/categories";
+    return this.http.get(url);
+  }
+
   postSubmission(formData: Submission): Observable<any> {
     let url = this.base_url + "/submissions";
     return this.http.post(url, formData);

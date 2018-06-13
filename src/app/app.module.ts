@@ -15,12 +15,14 @@ import { LoaderComponent } from "./assets/loader/loader.component";
 
 import { LoaderService } from "./services/loader.service";
 import { SubmissionComponent } from "./submission/submission.component";
-import { ToastComponent } from './assets/toast/toast.component';
+import { ToastComponent } from "./assets/toast/toast.component";
+import { HtmlPipe } from "./pipes/html.pipe";
 
 const BASE_URL = "http://localhost:3000";
 
 const appRoutes: Routes = [
   { path: "", component: HomeComponent },
+  { path: "category/:name", component: HomeComponent },
   { path: "submit", component: SubmitComponent },
   { path: "submit/:id/edit", component: SubmitComponent },
   { path: "submission/:id", component: SubmissionComponent }
@@ -37,7 +39,8 @@ const appRoutes: Routes = [
     CardComponent,
     LoaderComponent,
     SubmissionComponent,
-    ToastComponent
+    ToastComponent,
+    HtmlPipe
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

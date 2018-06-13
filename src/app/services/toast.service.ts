@@ -8,6 +8,7 @@ import { ToastState } from "../interface/toast-state";
 export class ToastService {
   private toastSubject = new Subject<ToastState>();
   toastState = this.toastSubject.asObservable();
+  
   constructor() {
     this.hide();
   }

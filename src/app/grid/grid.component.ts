@@ -7,10 +7,6 @@ import { Component, OnInit, Input } from "@angular/core";
 })
 export class GridComponent implements OnInit {
   @Input() items;
-
   constructor() {}
-
   ngOnInit() {}
 }
-
-

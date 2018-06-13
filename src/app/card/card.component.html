@@ -1,10 +1,19 @@
-<div class="pin" [ngStyle]="{'background-image': 'url(' + item + ')'}">
-  <div class="content">
+<div class="pin" [ngStyle]="{'background-image': 'url(' + item.image + ')'}">
+  <div (ngClass)="{'hidden': !videoActive}">
+    <iframe #video class="video-frame" src="" frameborder="0"></iframe>
+  </div>
+  <div class="video-frame-scroller-div-top"></div>
+  <div class="video-frame-scroller-div-bottom"></div>
+
+  <div [ngClass]="{'play-container': true, 'hidden': videoActive}" class="play-container" (click)="onPlayClick()">
+    <i class="huge yellow play circle icon"></i>
+  </div>
+  <div [ngClass]="{'content': true, 'hidden': videoActive}" class="content">
     <div class="header">
-      <p>Charlie - Attention</p>
+      <p>{{item.title}}</p>
     </div>
     <div class="sub-header">
-      <p>Paula Olivia</p>
+      <p>{{item.name}}</p>
     </div>
   </div>
 </div>
