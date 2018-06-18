@@ -13,10 +13,10 @@ import { ToastService } from "../services/toast.service";
 })
 export class SubmitComponent implements OnInit {
   @ViewChild("submission") submitForm: NgForm;
-  private action: string = "Submit";
-  private editMode: boolean = false;
-  private loading: boolean = false;
-  private submissionId: string = "";
+  action: string = "Submit";
+  editMode: boolean = false;
+  loading: boolean = false;
+  submissionId: string = "";
   errors: Array<string> = [];
 
   constructor(

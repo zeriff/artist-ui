@@ -16,7 +16,6 @@ export class HomeComponent implements OnInit {
     });
   }
   ngOnInit() {
-    console.log("nginit");
     this.loadPins(0);
     window.onscroll = () => {
       var sticky = document.getElementById("category");

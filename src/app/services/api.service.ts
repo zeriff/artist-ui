@@ -11,9 +11,7 @@ export class ApiService {
   constructor(private http: HttpClient, @Inject("BASE_URL") base_url: string) {
     this.base_url = base_url;
     let optionsUrl = this.base_url + "/options";
-    this.http.options(optionsUrl).subscribe(() => {
-      console.log("OPTIONS");
-    });
+    this.http.options(optionsUrl).subscribe(() => {});
   }
   getPins(id): Observable<any> {
     let url = `${this.base_url}/pins/by_category/${id}`;

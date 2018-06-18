@@ -11,6 +11,7 @@ import { LoaderService } from "../services/loader.service";
 })
 export class SubmissionComponent implements OnInit {
   submission: Submission = {};
+ 
   constructor(
     private route: ActivatedRoute,
     private api: ApiService,

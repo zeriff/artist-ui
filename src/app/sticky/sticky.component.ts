@@ -11,8 +11,8 @@ import * as _ from "lodash";
 })
 export class StickyComponent implements OnInit {
   @Input() onCategoryChange;
-  private categories: any = [];
-  private selectedCategory = { id: 0 };
+  categories: any = [];
+  selectedCategory = { id: 0 };
   constructor(
     private loaderService: LoaderService,
     private api: ApiService,

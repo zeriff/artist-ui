@@ -1,7 +1,10 @@
 <div class="ui container">
   <div class="ui two column stackable centered grid">
-    <div class="column">
-      <form #submission="ngForm" (ngSubmit)="onFormSubmit(submission.form);" class="ui form">
+    <div class="column centered">
+      <h1>New Submission</h1>
+      <div class="ui divider"></div>
+      <form #submission="ngForm" (ngSubmit)="onFormSubmit();" class="ui form">
+
         <div class="error" *ngIf="submission.form.errors">
           <div class="ui negative message">
             <div class="header">

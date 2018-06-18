@@ -10,7 +10,7 @@ export class CardComponent implements OnInit {
   @Input() item;
   @Input() active: boolean = null;
   @ViewChild("video") videoFrame;
-  private videoActive: boolean = false;
+  videoActive: boolean = false;
   constructor(private video: VideoService) {}
 
   ngOnInit() {
