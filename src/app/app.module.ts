@@ -18,7 +18,8 @@ import { SubmissionComponent } from "./submission/submission.component";
 import { ToastComponent } from "./assets/toast/toast.component";
 import { HtmlPipe } from "./pipes/html.pipe";
 
-const BASE_URL = "http://localhost:3000";
+// const BASE_URL = "http://localhost:3000";
+const BASE_URL = "https://54ae2508.ngrok.io";
 
 const appRoutes: Routes = [
   { path: "", component: HomeComponent },
